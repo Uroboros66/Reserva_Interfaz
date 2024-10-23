@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
+             x:Class="Reserva_Interfaz.Sign_up"
+             Title="sing_up"
+              BackgroundColor="{DynamicResource SecondaryColor}"
+ NavigationPage.HasNavigationBar="False">
+
+
+    <Grid>
+        
+
+
+
+
+        <!-- Contenido de la página -->
+        <VerticalStackLayout 
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" 
+        Spacing="20">
+
+            <Label 
+            Text="Crear una nueva cuenta"
+            TextColor="Black" 
+            FontSize="24" 
+            FontAttributes="Bold" 
+            HorizontalOptions="Center" />
+
+            <Entry 
+            Placeholder="Nombre" 
+            PlaceholderColor="Black"
+            TextColor="White"
+                Text="{Binding Nombre}"
+            BackgroundColor="Transparent"
+            WidthRequest="250" />
+
+            <Entry 
+            Placeholder="Contraseña" 
+            PlaceholderColor="Black"
+            TextColor="White"
+                Text="{Binding Contraseña}"
+            IsPassword="True" 
+            BackgroundColor="Transparent"
+            WidthRequest="250" />
+
+            <Entry 
+            Placeholder="Confirmar Contraseña" 
+            PlaceholderColor="Black"
+            TextColor="White"
+            IsPassword="True" 
+            BackgroundColor="Transparent"
+            WidthRequest="250" />
+
+            <!-- Selector de rol -->
+            <Picker 
+            Title="Selecciona tu rol"
+            SelectedIndexChanged="OnRoleSelected"
+            WidthRequest="250"
+            TextColor="Black">
+                <Picker.Items>
+                    <x:String>Cliente</x:String>
+                    <x:String>Barbero</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button 
+            x:Name="saveButton"
+            Text="Guardar" 
+            TextColor="White" 
+            BackgroundColor="#333333" 
+            WidthRequest="250" 
+            CornerRadius="25"
+            Clicked="OnSaveButtonClicked" />
+
+            <Button 
+            x:Name="backButton"
+            Text="Volver al Login" 
+            TextColor="White" 
+            BackgroundColor="#555555" 
+            BorderColor="White"
+            BorderWidth="2"
+            WidthRequest="250" 
+            CornerRadius="25"
+            Clicked="OnBackButtonClicked"
+                Command="{Binding RegisterCommand}" />
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
