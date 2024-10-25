@@ -14,11 +14,6 @@ namespace Reserva_Interfaz
             await Navigation.PushAsync(new Corte());
         }
 
-        private async void OnPagoButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Pago());
-        }
-
         private async void OnPerfilButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Perfil());

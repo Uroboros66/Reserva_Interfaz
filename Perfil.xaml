@@ -127,6 +127,14 @@
                     TextColor="White" 
                     FontAttributes="Bold" 
                     CornerRadius="5"/>
+
+            <!-- Botón para volver al menú -->
+            <Button Text="Volver al Menú" 
+                BackgroundColor="#333333" 
+                TextColor="White" 
+                Grid.Row="3" 
+                HorizontalOptions="Center" 
+                Clicked="OnBackToMenuClicked" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

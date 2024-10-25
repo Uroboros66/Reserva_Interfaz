@@ -11,11 +11,6 @@
                 TextColor="White" 
                 Clicked="OnCorteButtonClicked" />
 
-        <Button Text="Pago" 
-                BackgroundColor="#333333" 
-                TextColor="White" 
-                Clicked="OnPagoButtonClicked" />
-
         <Button Text="Perfil" 
                 BackgroundColor="#333333" 
                 TextColor="White" 
